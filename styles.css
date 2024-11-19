@@ -1,0 +1,284 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+  }
+  
+  /* Utility Classes */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .flex-center {
+    justify-content: center;
+  }
+  
+  /* Header */
+  .header {
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #00bcd4;
+    text-decoration: none;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #00bcd4;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url(Images/main\ image.webp);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  
+  .hero-content {
+    z-index: 1;
+  }
+  
+  .hero-heading {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .hero-subheading {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  /* Products Section */
+  .products {
+    padding: 50px 0;
+  }
+  
+  .section-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .product-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .product-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    flex: 1 1 calc(33.333% - 40px); /* Three items per row */
+  }
+  
+  .product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .product-title {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  /* Meet the Team Section */
+.team {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .team-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    position: relative;
+    flex: 1 1 calc(33.333% - 20px); /* 3 items per row */
+    max-width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .team-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Transparent white overlay */
+    color: #333;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .team-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .team-role {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .team-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .team-member {
+      flex: 1 1 calc(50% - 20px); /* 2 items per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .team-member {
+      flex: 1 1 100%; /* 1 item per row */
+    }
+  
+    .team-name {
+      font-size: 1.2rem;
+    }
+  
+    .team-role {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Footer */
+  .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-heading {
+      font-size: 2rem;
+    }
+  
+    .hero-subheading {
+      font-size: 1.2rem;
+    }
+  
+    .product-grid {
+      gap: 20px;
+    }
+  
+    .product-item {
+      flex: 1 1 calc(50% - 20px); /* Two items per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-heading {
+      font-size: 1.5rem;
+    }
+  
+    .hero-subheading {
+      font-size: 1rem;
+    }
+  
+    .product-item {
+      flex: 1 1 100%; /* One item per row */
+    }
+  }
+  
